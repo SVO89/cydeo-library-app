@@ -9,6 +9,11 @@ import java.util.List;
 
 // page_url = https://library2.cydeo.com/login.html
 public class LoginPage {
+
+    public LoginPage() {
+
+        PageFactory.initElements(Driver.getDriver(), this); }
+
     @FindBy(id = "inputEmail")
     public WebElement emailInput;
 
@@ -17,10 +22,4 @@ public class LoginPage {
 
     @FindBy(xpath = "//*[text() = 'Sign in']")
     public WebElement signInBtn;
-
-    // No page elements added
-
-    public LoginPage() {
-        PageFactory.initElements(Driver.getDriver(), this);
-    }
 }
